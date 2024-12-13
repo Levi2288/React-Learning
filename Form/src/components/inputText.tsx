@@ -12,6 +12,9 @@ type TInputTextProps = {
 
 const InputText: React.FC<TInputTextProps> = ({ ID, Name, Required, Type, inputChangeEvent}) => {        
 
+    // input validácio regexel pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+
+
     return(
         <div>
             <label>{Name}</label>

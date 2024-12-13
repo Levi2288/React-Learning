@@ -3,11 +3,13 @@ import './App.css'
 import React, { useState } from "react";
 import DropDown from "./components/dropDown"
 import InputText from "./components/inputText"
-import SubmitButton from './components/submitButton';
+import Button from './components/button';
 
 
 function App() {
 
+
+    //const [user, setUser] = useState<User | undefined >()
     const [formValues, setFormValues] = useState<{ [key: string]: string }>({
         firstName: "",
         lastName: "",
@@ -60,12 +62,12 @@ function App() {
             <InputText ID="lastName" Name= "Last Name" Type="text" Required={true} inputChangeEvent={onInputchange}/>
             <InputText ID="firstName" Name= "First Name" Type="text" Required={true} inputChangeEvent={onInputchange}/>
             <InputText ID="email" Name= "Email" Type="text" Required={true} inputChangeEvent={onInputchange}/>
-            <InputText ID="phoneNum" Name= "Phone Number" Type="tel" Required={true} inputChangeEvent={onInputchange}/>
+            <InputText ID="phoneNum" Name= "Phone Number" Type="phone" Required={true} inputChangeEvent={onInputchange}/>
             <InputText ID="address" Name= "Address" Type="text" Required={true} inputChangeEvent={onInputchange}/>
             <br />
             <DropDown ID="favouriteAnimal" Name="Favourite animals" Entries= {["Dog","Cat","Tiger"]} onChangeEvent={onSelectchange}/>
             <br />
-            <SubmitButton Label="Submit"/>
+            <Button Label="Submit"/>
         </form> 
     </div>
     );

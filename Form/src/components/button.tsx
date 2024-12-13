@@ -4,7 +4,7 @@ type TButtonProps = {
 }
 
 
-const SubmitButton:React.FC<TButtonProps> = ({ Label, submitFormEvent }) => {
+const Button:React.FC<TButtonProps> = ({ Label, submitFormEvent }) => {
 
 
     return(
@@ -12,4 +12,4 @@ const SubmitButton:React.FC<TButtonProps> = ({ Label, submitFormEvent }) => {
     );
   };
 
-export default SubmitButton;
+export default Button;
